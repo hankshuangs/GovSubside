@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D3E583C-6DA2-4369-ABA8-D184F82572FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DistSubside</RootNamespace>
+    <AssemblyName>DistSubside</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>發行\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>img\BusRed-96.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataReader\CSVReader.cs" />
+    <Compile Include="DataReader\MyExcel.cs" />
+    <Compile Include="DataSet\DynamicDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DynamicDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\EKDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EKDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutBox.Designer.cs">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseCorps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseCorps.Designer.cs">
+      <DependentUpon>frmBaseCorps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDialog.Designer.cs">
+      <DependentUpon>frmBaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseHolidays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseHolidays.Designer.cs">
+      <DependentUpon>frmBaseHolidays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseOps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseOps.Designer.cs">
+      <DependentUpon>frmBaseOps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseRoute.Designer.cs">
+      <DependentUpon>frmBaseRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseStation.Designer.cs">
+      <DependentUpon>frmBaseStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseStdSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseStdSchedule.Designer.cs">
+      <DependentUpon>frmBaseStdSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseVacations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseVacations.Designer.cs">
+      <DependentUpon>frmBaseVacations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpsDailySchdlImp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpsDailySchdlImp.Designer.cs">
+      <DependentUpon>frmOpsDailySchdlImp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpsDynamicImp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpsDynamicImp.Designer.cs">
+      <DependentUpon>frmOpsDynamicImp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpsTicketImp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpsTicketImp.Designer.cs">
+      <DependentUpon>frmOpsTicketImp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportDynamiclmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportDynamiclmp.Designer.cs">
+      <DependentUpon>frmReportDynamiclmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportEK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportEK.Designer.cs">
+      <DependentUpon>frmReportEK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AddDataColumn.cs" />
+    <Compile Include="Model\Drop.cs" />
+    <Compile Include="Model\SqlProc.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQL\Corps.cs" />
+    <Compile Include="SQL\Dynamic_SQL.cs" />
+    <Compile Include="SQL\Holidays.cs" />
+    <Compile Include="SQL\Route.cs" />
+    <Compile Include="SQL\Station.cs" />
+    <Compile Include="SQL\StdSchedule.cs" />
+    <Compile Include="SQL\Ticket_SQL.cs" />
+    <Compile Include="SQL\Vacations.cs" />
+    <EmbeddedResource Include="frmAboutBox.resx">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseCorps.resx">
+      <DependentUpon>frmBaseCorps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDialog.resx">
+      <DependentUpon>frmBaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseHolidays.resx">
+      <DependentUpon>frmBaseHolidays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseOps.resx">
+      <DependentUpon>frmBaseOps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseRoute.resx">
+      <DependentUpon>frmBaseRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseStation.resx">
+      <DependentUpon>frmBaseStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseStdSchedule.resx">
+      <DependentUpon>frmBaseStdSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseVacations.resx">
+      <DependentUpon>frmBaseVacations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpsDailySchdlImp.resx">
+      <DependentUpon>frmOpsDailySchdlImp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpsDynamicImp.resx">
+      <DependentUpon>frmOpsDynamicImp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpsTicketImp.resx">
+      <DependentUpon>frmOpsTicketImp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportDynamiclmp.resx">
+      <DependentUpon>frmReportDynamiclmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportEK.resx">
+      <DependentUpon>frmReportEK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\Report_Dynamic.rdlc" />
+    <EmbeddedResource Include="Report\Report_EK.rdlc" />
+    <None Include="DataSet\DynamicDataSet.xsc">
+      <DependentUpon>DynamicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DynamicDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DynamicDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DynamicDataSet.xss">
+      <DependentUpon>DynamicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\EKDataSet.xsc">
+      <DependentUpon>EKDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\EKDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EKDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\EKDataSet.xss">
+      <DependentUpon>EKDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\Adobe PDF Document-01.ico" />
+    <Content Include="img\Button Download-01.ico" />
+    <Content Include="img\Add.ico" />
+    <Content Include="img\Authority.ico" />
+    <Content Include="img\Backup.ico" />
+    <Content Include="img\btnAddNew.png" />
+    <Content Include="img\btnCancel.png" />
+    <Content Include="img\btnCancelEdit.png" />
+    <Content Include="img\btnConfirm.png" />
+    <Content Include="img\btnDelete.png" />
+    <Content Include="img\btnEdit.png" />
+    <Content Include="img\btnFirst.png" />
+    <Content Include="img\btnLast.png" />
+    <Content Include="img\btnNext.png" />
+    <Content Include="img\btnPrint.png" />
+    <Content Include="img\btnPrior.png" />
+    <Content Include="img\btnSaveChange.png" />
+    <Content Include="img\btnSearch.png" />
+    <Content Include="img\BusRed-24.ico" />
+    <Content Include="img\BusRed-32.ico" />
+    <Content Include="img\BusRed-64.ico" />
+    <Content Include="img\BusRed-96.ico" />
+    <Content Include="img\Cancel.ico" />
+    <Content Include="img\ChangePWD.ico" />
+    <Content Include="img\Check.ico" />
+    <Content Include="img\clear.ico" />
+    <Content Include="img\Company.ico" />
+    <Content Include="img\Copy.ico" />
+    <Content Include="img\Customer.ico" />
+    <Content Include="img\Cut.ico" />
+    <Content Include="img\Default.ico" />
+    <Content Include="img\Document Microsoft Excel-01.ico" />
+    <Content Include="img\Document Microsoft Word-01.ico" />
+    <Content Include="img\Download.ico" />
+    <Content Include="img\Employee.ico" />
+    <Content Include="img\events.ico" />
+    <Content Include="img\Excel.ico" />
+    <Content Include="img\Exit.ico" />
+    <Content Include="img\Explain.ico" />
+    <Content Include="img\find.ico" />
+    <Content Include="img\GenerateKey.ico" />
+    <Content Include="img\iBusLogoW.png" />
+    <Content Include="img\iBusLogoB.png" />
+    <Content Include="img\Insert.ico" />
+    <Content Include="img\Inventory.ico" />
+    <Content Include="img\Items.ico" />
+    <Content Include="img\Left.ico" />
+    <Content Include="img\Login.ico" />
+    <Content Include="img\Logout.ico" />
+    <Content Include="img\Manufacturer.ico" />
+    <Content Include="img\Modify.ico" />
+    <Content Include="img\New.ico" />
+    <Content Include="img\OK.ico" />
+    <Content Include="img\Paste.ico" />
+    <Content Include="img\People.ico" />
+    <Content Include="img\Power.ico" />
+    <Content Include="img\print.ico" />
+    <Content Include="img\programs01.ico" />
+    <Content Include="img\programs02.ico" />
+    <Content Include="img\Purchase.ico" />
+    <Content Include="img\Query.ico" />
+    <Content Include="img\Recovery.ico" />
+    <Content Include="img\Refresh.ico" />
+    <Content Include="img\Remove.ico" />
+    <Content Include="img\RemoveAll.ico" />
+    <Content Include="img\Report.ico" />
+    <Content Include="img\Reversal.ico" />
+    <Content Include="img\Right.ico" />
+    <Content Include="img\RMA.ico" />
+    <Content Include="img\Save.ico" />
+    <Content Include="img\Search.ico" />
+    <Content Include="img\Setting.ico" />
+    <Content Include="img\Ship.ico" />
+    <Content Include="img\Shipment.ico" />
+    <Content Include="img\Stock.ico" />
+    <Content Include="img\Stop.ico" />
+    <Content Include="img\TakeStock.ico" />
+    <Content Include="img\Update.ico" />
+    <Content Include="img\Upgrade.ico" />
+    <Content Include="img\UserRegistration.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

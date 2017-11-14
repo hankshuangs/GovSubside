@@ -1,0 +1,113 @@
+c:\users\harold.sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\bin\Debug\DistSubside.exe.config
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\bin\Debug\DistSubside.exe
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\bin\Debug\DistSubside.pdb
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmMain.resources
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.Properties.Resources.resources
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.csproj.GenerateResource.Cache
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.exe
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.pdb
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmAboutBox.resources
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseDialog.resources
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBase.resources
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseOps.resources
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmOpsDailySchdlImp.resources
+C:\Users\Harold.Sheu\documents\visual studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.csprojResolveAssemblyReference.cache
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\bin\Debug\DistSubside.exe.config
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.exe
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.pdb
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\bin\Debug\DistSubside.exe
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\bin\Debug\DistSubside.pdb
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.frmAboutBox.resources
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.frmBase.resources
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseDialog.resources
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseOps.resources
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.frmOpsDailySchdlImp.resources
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.frmMain.resources
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.Properties.Resources.resources
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.csproj.GenerateResource.Cache
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\bin\Debug\NPOI.dll
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.frmOpsDynamicImp.resources
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.csprojResolveAssemblyReference.cache
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.frmTest.resources
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.frmOpsTicketImp.resources
+D:\程式\ibus車公里補貼\台中車公里補貼\Source\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseCorps.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\DistSubside.exe.config
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\DistSubside.exe
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\DistSubside.pdb
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.csproj.ResolveComReference.cache
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmAboutBox.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBase.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseCorps.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseDialog.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseOps.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseRoute.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseStation.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseVacations.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmOpsDailySchdlImp.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmOpsDynamicImp.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmOpsTicketImp.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmReportDynamiclmp.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmReportEK.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmMain.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.Properties.Resources.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.csproj.GenerateResource.Cache
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\RdlCompile.cache
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\RdlCompile.compiled
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.exe
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.pdb
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseStdSchedule.resources
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.csprojResolveAssemblyReference.cache
+C:\Users\RJNB\Documents\Visual Studio 2015\Projects\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseHolidays.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\DistSubside.exe.config
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\DistSubside.exe
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\DistSubside.pdb
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.csprojResolveAssemblyReference.cache
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.csproj.ResolveComReference.cache
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmAboutBox.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmBase.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseCorps.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseDialog.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseHolidays.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseOps.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseRoute.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseStation.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseStdSchedule.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmBaseVacations.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmOpsDailySchdlImp.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmOpsDynamicImp.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmOpsTicketImp.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmReportDynamiclmp.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmReportEK.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.frmMain.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.Properties.Resources.resources
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.csproj.GenerateResource.Cache
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\RdlCompile.cache
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\RdlCompile.compiled
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.exe
+D:\Test\車公里補貼程式\原始碼\GovSubside\DistSubside\obj\Debug\DistSubside.pdb
