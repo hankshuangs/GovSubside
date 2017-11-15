@@ -169,7 +169,15 @@ namespace DistSubside.DataReader
             {
                 throw ioex;
             }
-        }
+
+			DataTable MyTable = dt;
+			dt.DefaultView.Sort = "營運日期,路線,上車時間"; //DESC 由大到小
+			dt = dt.DefaultView.ToTable();		
+			System.Data.DataSet MyDs = new System.Data.DataSet();
+			MyDs.Tables.Add(dt);
+			int count = MyTable.Rows.Count;
+
+		}
         public DataTable getDataTable()
         {
             return dt;
