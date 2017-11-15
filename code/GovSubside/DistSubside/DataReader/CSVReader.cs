@@ -8,8 +8,10 @@ namespace DistSubside.DataReader
     class CSVReader
     {
         private DataTable dt;
-        public String[] TitleName;
-        public int StartLineIndex = 4;
+		private DataTable Mydt = new DataTable();
+		public String[] TitleName;
+		public String[] MyTitleName;
+		public int StartLineIndex = 4;
         private List<String> DataSet;
         private String Last_Date = "";
         private String Last_Route = "";
@@ -22,160 +24,388 @@ namespace DistSubside.DataReader
             RouteArray = new List<string>();
             try
             {
-                using (FileStream st = new FileStream(_Path, FileMode.Open))
-                {
-                    using (StreamReader reader = new StreamReader(st, System.Text.Encoding.Default))
-                    {
-                        #region 資料處理
-                        DataSet = new List<string>();
-                        dt = new DataTable();
-                        string TempStringLine;
+				using (FileStream st = new FileStream(_Path, FileMode.Open))
+				{
+					using (StreamReader reader = new StreamReader(st, System.Text.Encoding.Default))
+					{
+						#region 資料處理
+						DataSet = new List<string>();
+						dt = new DataTable();
+						string TempStringLine;
 
-                        //前面跳過
-                        for (int i = 1; i < StartLineIndex; i++)
-                        {
-                            TempStringLine = reader.ReadLine();
-                            if (i == 2)
-                            {
-                                TempStringLine = TempStringLine.Replace(",", "");
-                                String[] temp1 = TempStringLine.Split(':');
-                                string time_range = temp1[temp1.Length-1];
-                                time_range = time_range.Replace(" ", ""); //取代空白
-                                DateRange = time_range.Split('~');  //這樣就會傳出長度為2的時間陣列
-                            }
-                            Console.WriteLine(TempStringLine);
-                        }
-                        //讀TITLE
-                        TempStringLine = reader.ReadLine();
-                        TitleName = TempStringLine.Split(',');
-                        foreach (String eachTitle in TitleName)
-                        {
-                            dt.Columns.Add(eachTitle, typeof(string));
-                        }
-                        dt.Columns.Add("IsFirst", typeof(int));
-                        //讀Data
-                        while (!reader.EndOfStream)
-                        {
-                            TempStringLine = reader.ReadLine();
-                            TempStringLine = TempStringLine.Replace(@"=", "");
-                            TempStringLine = TempStringLine.Replace("\"", "");
-                            DataSet.Add(TempStringLine);
-                            String[] eachData = TempStringLine.Split(',');
-                            DataRow dr = dt.NewRow();
-                            for (int i = 0; i < TitleName.Length; i++)
-                            {
-                                try
-                                {
-                                    if (i == 0 || i == 8 || i == 16 || i == 9 || i == 10 || i == 11|| i==12 || i==20 || i == 17 || i == 18 || i == 19)
-                                    {
-                                        switch (i)
-                                        {
-                                            //把日期從yyyy/MM/dd改成yyyy-MM-dd
-                                            case 0:
-                                            case 8:
-                                            case 16:
-                                                eachData[i] = eachData[i].ToString().Replace(@"/", "-");
-                                                dr[TitleName[i]] = eachData[i].ToString();
-                                                break;
-                                            //轉換成金錢欄位
-                                            case 9:
-                                            case 10:
-                                            case 11:
-                                            case 17:
-                                            case 18:
-                                            case 19:
-                                                if (eachData[i] == "")
-                                                {
-                                                    dr[TitleName[i]] = 0;
-                                                }
-                                                else
-                                                {
-                                                    dr[TitleName[i]] = Decimal.Parse(eachData[i].ToString());
-                                                }
-                                                break;
-                                            case 12:
-                                            case 20:
-                                                if (eachData[i] == "" || eachData[i] == String.Empty)
-                                                {
-                                                    dr[TitleName[i]] = "-1";
-                                                }
-                                                else
-                                                {
-                                                    dr[TitleName[i]] = eachData[i].ToString();
-                                                }
-                                                break;
-                                        }
+						//前面跳過
+						for (int i = 1; i < StartLineIndex; i++)
+						{
+							TempStringLine = reader.ReadLine();
+							if (i == 2)
+							{
+								TempStringLine = TempStringLine.Replace(",", "");
+								String[] temp1 = TempStringLine.Split(':');
+								string time_range = temp1[temp1.Length - 1];
+								time_range = time_range.Replace(" ", ""); //取代空白
+								DateRange = time_range.Split('~');  //這樣就會傳出長度為2的時間陣列
+							}
+							Console.WriteLine(TempStringLine);
+						}
+						//讀TITLE
+						TempStringLine = reader.ReadLine();
+						TitleName = TempStringLine.Split(',');
+						foreach (String eachTitle in TitleName)
+						{
+							dt.Columns.Add(eachTitle, typeof(string));
+						}
+						dt.Columns.Add("IsFirst", typeof(int));
+						//讀Data
+						while (!reader.EndOfStream)
+						{
+							TempStringLine = reader.ReadLine();
+							TempStringLine = TempStringLine.Replace(@"=", "");
+							TempStringLine = TempStringLine.Replace("\"", "");
+							DataSet.Add(TempStringLine);
+							String[] eachData = TempStringLine.Split(',');
+							DataRow dr = dt.NewRow();
+							for (int i = 0; i < TitleName.Length; i++)
+							{
+								try
+								{
+									if (i == 0 || i == 8 || i == 16 || i == 9 || i == 10 || i == 11 || i == 12 || i == 20 || i == 17 || i == 18 || i == 19)
+									{
+										switch (i)
+										{
+											//把日期從yyyy/MM/dd改成yyyy-MM-dd
+											case 0:
+											case 8:
+											case 16:
+												eachData[i] = eachData[i].ToString().Replace(@"/", "-");
+												dr[TitleName[i]] = eachData[i].ToString();
+												break;
+											//轉換成金錢欄位
+											case 9:
+											case 10:
+											case 11:
+											case 17:
+											case 18:
+											case 19:
+												if (eachData[i] == "")
+												{
+													dr[TitleName[i]] = 0;
+												}
+												else
+												{
+													dr[TitleName[i]] = Decimal.Parse(eachData[i].ToString());
+												}
+												break;
+											case 12:
+											case 20:
+												if (eachData[i] == "" || eachData[i] == String.Empty)
+												{
+													dr[TitleName[i]] = "-1";
+												}
+												else
+												{
+													dr[TitleName[i]] = eachData[i].ToString();
+												}
+												break;
+										}
 
-                                    }
-                                    else
-                                    {
-                                        dr[TitleName[i]] = eachData[i].ToString();
-                                    }
-                                }
-                                catch (FormatException Fex)
-                                {
-                                    //dr[TitleName[i]] = eachData[i].ToString();
-                                    dr[TitleName[i]] = Fex.ToString();
-                                }
-                            }
-                            if (IsFirstData) //資料堆中的第一筆
-                            {
-                                Last_Date = eachData[0];
-                                Last_Route = eachData[1];
-                                dr["IsFirst"] = 1;
-                                IsFirstData = false;
-                            }
-                            else // 不是第一筆就要開始判斷是否有跟上一筆的日期是相同
-                            {
-                                if (eachData[0] == Last_Date && eachData[1] == Last_Route) //判斷日期或路線有跟之前的第一筆是否相同
-                                {
-                                    dr["IsFirst"] = 0;
-                                }
-                                else
-                                {
-                                    dr["IsFirst"] = 1;
-                                    Last_Date = eachData[0];
-                                    Last_Route = eachData[1];
-                                }
-                            }
-                            if (dr["IsFirst"].ToString() == "1")
-                            {
-                                //只要是第一筆，就要看看路線單裡面有沒有該路的資料，沒有就加，有的話就不用再增加
-                                bool isAdd = true;
-                                if (DataLengh != 0)
-                                {
-                                    for (int i = 0; i < RouteArray.Count; i++)
-                                    {
-                                        if (RouteArray[i].ToString() == dr["路線"].ToString())  //遍歷法，找到相等就把旗標改false
-                                        {
-                                            isAdd = false;
-                                        }
-                                    }
-                                }
-                                if (isAdd)
-                                {
-                                    RouteArray.Add(dr["路線"].ToString());
-                                }
-                            }
-                            dt.Rows.Add(dr);
-                            DataLengh++;
+									}
+									else
+									{
+										dr[TitleName[i]] = eachData[i].ToString();
+									}
+								}
+								catch (FormatException Fex)
+								{
+									//dr[TitleName[i]] = eachData[i].ToString();
+									dr[TitleName[i]] = Fex.ToString();
+								}
+							}
+							dt.Rows.Add(dr);
+							DataLengh++;
+						}
+						#endregion
 
-                        }
-                        #endregion
-                    }
-                }
-            }
-            catch (IOException ioex)
+						//以上是把檔到讀到dt中,做些欄位的格式處理與增加欄位
+						//1.接下來是把dt做排序dt.DefaultView.Sort = "營運日期,路線,上車時間";
+						//2.另外煩惱每次場商檔案有可能新增欄位,想辦法只抓出程式需要的欄位資料
+						//3.最後設定dr["IsFirst"] =1 or 0 ,然後加RouteArray.Add(dr["路線"].ToString());
+
+						//1.排序
+						dt.DefaultView.Sort = "營運日期,路線,上車時間";
+						dt = dt.DefaultView.ToTable();
+						int count = dt.Rows.Count;
+
+						//2.建立必要的欄位
+						MyTitleName = "營運日期,路線,路線起站,路線迄站,車牌號,票證公司,票種,卡號,上車時間,上車消費應扣,上車轉乘金額,上車票差金額,上車站站序,上車站,上車計費站,上車轉乘碼,下車時間,下車消費應扣,下車轉乘金額,下車票差金額,下車站站序,下車站,下車計費站,下車轉乘碼,方向,小計".Split(',');
+						
+						foreach (String eachTitle in MyTitleName)
+						{
+							Mydt.Columns.Add(eachTitle, typeof(string));
+						}
+						Mydt.Columns.Add("IsFirst", typeof(int));
+						//MyTitleName2欄位名後面要加上IsFirst
+						String[] MyTitleName2 = "營運日期,路線,路線起站,路線迄站,車牌號,票證公司,票種,卡號,上車時間,上車消費應扣,上車轉乘金額,上車票差金額,上車站站序,上車站,上車計費站,上車轉乘碼,下車時間,下車消費應扣,下車轉乘金額,下車票差金額,下車站站序,下車站,下車計費站,下車轉乘碼,方向,小計,IsFirst".Split(',');
+
+						//抓取必要的欄位
+						foreach (string titlename in MyTitleName2)
+						{
+							IsFirstData = true;
+							for (int i = 0; i < count; i++)
+							{
+								Mydt.Rows.Add(Mydt.NewRow());
+								if (titlename.Equals("IsFirst"))
+								{
+									if (IsFirstData) //資料堆中的第一筆
+									{
+										Last_Date = Mydt.Rows[i]["營運日期"].ToString();
+										Last_Route = Mydt.Rows[i]["路線"].ToString();
+										Mydt.Rows[i]["IsFirst"] = 1;
+										IsFirstData = false;
+									}
+									else // 不是第一筆就要開始判斷是否有跟上一筆的日期是相同
+									{
+										if (Mydt.Rows[i]["營運日期"].ToString() == Last_Date && Mydt.Rows[i]["路線"].ToString() == Last_Route) //判斷日期或路線有跟之前的第一筆是否相同
+										{
+											Mydt.Rows[i]["IsFirst"] = 0;
+										}
+										else
+										{
+											Mydt.Rows[i]["IsFirst"] = 1;
+											Last_Date = Mydt.Rows[i]["營運日期"].ToString();
+											Last_Route = Mydt.Rows[i]["路線"].ToString();
+										}
+									}
+									if (Mydt.Rows[i]["IsFirst"].ToString() == "1")
+									{
+										//只要是第一筆，就要看看路線單裡面有沒有該路的資料，沒有就加，有的話就不用再增加
+										bool isAdd = true;
+										if (DataLengh != 0)
+										{
+											for (int i = 0; i < RouteArray.Count; i++)
+											{
+												if (RouteArray[i].ToString() == dr["路線"].ToString())  //遍歷法，找到相等就把旗標改false
+												{
+													isAdd = false;
+												}
+											}
+										}
+										if (isAdd)
+										{
+											RouteArray.Add(dr["路線"].ToString());
+										}
+									}
+								}
+								else
+								{
+									Mydt.Rows[i][titlename] = dt.Rows[1][titlename];
+								}
+
+							}
+
+						}
+
+						//3.設定IsFirst 與 然後加RouteArray
+
+
+
+
+
+						//if (IsFirstData) //資料堆中的第一筆
+						//{
+						//	Last_Date = eachData[0];
+						//	Last_Route = eachData[1];
+						//	dr["IsFirst"] = 1;
+						//	IsFirstData = false;
+						//}
+						//else // 不是第一筆就要開始判斷是否有跟上一筆的日期是相同
+						//{
+						//	if (eachData[0] == Last_Date && eachData[1] == Last_Route) //判斷日期或路線有跟之前的第一筆是否相同
+						//	{
+						//		dr["IsFirst"] = 0;
+						//	}
+						//	else
+						//	{
+						//		dr["IsFirst"] = 1;
+						//		Last_Date = eachData[0];
+						//		Last_Route = eachData[1];
+						//	}
+						//}
+						//if (dr["IsFirst"].ToString() == "1")
+						//{
+						//	//只要是第一筆，就要看看路線單裡面有沒有該路的資料，沒有就加，有的話就不用再增加
+						//	bool isAdd = true;
+						//	if (DataLengh != 0)
+						//	{
+						//		for (int i = 0; i < RouteArray.Count; i++)
+						//		{
+						//			if (RouteArray[i].ToString() == dr["路線"].ToString())  //遍歷法，找到相等就把旗標改false
+						//			{
+						//				isAdd = false;
+						//			}
+						//		}
+						//	}
+						//	if (isAdd)
+						//	{
+						//		RouteArray.Add(dr["路線"].ToString());
+						//	}
+						//}
+
+
+
+					}
+				}
+
+
+
+
+				////以下註解為舊的讀取方式1060831版的做法
+				//using (FileStream st = new FileStream(_Path, FileMode.Open))
+				//{
+				//    using (StreamReader reader = new StreamReader(st, System.Text.Encoding.Default))
+				//    {
+				//        #region 資料處理
+				//        DataSet = new List<string>();
+				//        dt = new DataTable();
+				//        string TempStringLine;
+
+				//        //前面跳過
+				//        for (int i = 1; i < StartLineIndex; i++)
+				//        {
+				//            TempStringLine = reader.ReadLine();
+				//            if (i == 2)
+				//            {
+				//                TempStringLine = TempStringLine.Replace(",", "");
+				//                String[] temp1 = TempStringLine.Split(':');
+				//                string time_range = temp1[temp1.Length-1];
+				//                time_range = time_range.Replace(" ", ""); //取代空白
+				//                DateRange = time_range.Split('~');  //這樣就會傳出長度為2的時間陣列
+				//            }
+				//            Console.WriteLine(TempStringLine);
+				//        }
+				//        //讀TITLE
+				//        TempStringLine = reader.ReadLine();
+				//        TitleName = TempStringLine.Split(',');
+				//        foreach (String eachTitle in TitleName)
+				//        {
+				//            dt.Columns.Add(eachTitle, typeof(string));
+				//        }
+				//        dt.Columns.Add("IsFirst", typeof(int));
+				//        //讀Data
+				//        while (!reader.EndOfStream)
+				//        {
+				//            TempStringLine = reader.ReadLine();
+				//            TempStringLine = TempStringLine.Replace(@"=", "");
+				//            TempStringLine = TempStringLine.Replace("\"", "");
+				//            DataSet.Add(TempStringLine);
+				//            String[] eachData = TempStringLine.Split(',');
+				//            DataRow dr = dt.NewRow();
+				//            for (int i = 0; i < TitleName.Length; i++)
+				//            {
+				//                try
+				//                {
+				//                    if (i == 0 || i == 8 || i == 16 || i == 9 || i == 10 || i == 11|| i==12 || i==20 || i == 17 || i == 18 || i == 19)
+				//                    {
+				//                        switch (i)
+				//                        {
+				//                            //把日期從yyyy/MM/dd改成yyyy-MM-dd
+				//                            case 0:
+				//                            case 8:
+				//                            case 16:
+				//                                eachData[i] = eachData[i].ToString().Replace(@"/", "-");
+				//                                dr[TitleName[i]] = eachData[i].ToString();
+				//                                break;
+				//                            //轉換成金錢欄位
+				//                            case 9:
+				//                            case 10:
+				//                            case 11:
+				//                            case 17:
+				//                            case 18:
+				//                            case 19:
+				//                                if (eachData[i] == "")
+				//                                {
+				//                                    dr[TitleName[i]] = 0;
+				//                                }
+				//                                else
+				//                                {
+				//                                    dr[TitleName[i]] = Decimal.Parse(eachData[i].ToString());
+				//                                }
+				//                                break;
+				//                            case 12:
+				//                            case 20:
+				//                                if (eachData[i] == "" || eachData[i] == String.Empty)
+				//                                {
+				//                                    dr[TitleName[i]] = "-1";
+				//                                }
+				//                                else
+				//                                {
+				//                                    dr[TitleName[i]] = eachData[i].ToString();
+				//                                }
+				//                                break;
+				//                        }
+
+				//                    }
+				//                    else
+				//                    {
+				//                        dr[TitleName[i]] = eachData[i].ToString();
+				//                    }
+				//                }
+				//                catch (FormatException Fex)
+				//                {
+				//                    //dr[TitleName[i]] = eachData[i].ToString();
+				//                    dr[TitleName[i]] = Fex.ToString();
+				//                }
+				//            }
+				//            if (IsFirstData) //資料堆中的第一筆
+				//            {
+				//                Last_Date = eachData[0];
+				//                Last_Route = eachData[1];
+				//                dr["IsFirst"] = 1;
+				//                IsFirstData = false;
+				//            }
+				//            else // 不是第一筆就要開始判斷是否有跟上一筆的日期是相同
+				//            {
+				//                if (eachData[0] == Last_Date && eachData[1] == Last_Route) //判斷日期或路線有跟之前的第一筆是否相同
+				//                {
+				//                    dr["IsFirst"] = 0;
+				//                }
+				//                else
+				//                {
+				//                    dr["IsFirst"] = 1;
+				//                    Last_Date = eachData[0];
+				//                    Last_Route = eachData[1];
+				//                }
+				//            }
+				//            if (dr["IsFirst"].ToString() == "1")
+				//            {
+				//                //只要是第一筆，就要看看路線單裡面有沒有該路的資料，沒有就加，有的話就不用再增加
+				//                bool isAdd = true;
+				//                if (DataLengh != 0)
+				//                {
+				//                    for (int i = 0; i < RouteArray.Count; i++)
+				//                    {
+				//                        if (RouteArray[i].ToString() == dr["路線"].ToString())  //遍歷法，找到相等就把旗標改false
+				//                        {
+				//                            isAdd = false;
+				//                        }
+				//                    }
+				//                }
+				//                if (isAdd)
+				//                {
+				//                    RouteArray.Add(dr["路線"].ToString());
+				//                }
+				//            }
+				//            dt.Rows.Add(dr);
+				//            DataLengh++;
+
+				//        }
+				//        #endregion
+				//    }
+				//}
+			}
+			catch (IOException ioex)
             {
                 throw ioex;
             }
-
-			DataTable MyTable = dt;
-			dt.DefaultView.Sort = "營運日期,路線,上車時間"; //DESC 由大到小
-			dt = dt.DefaultView.ToTable();		
-			System.Data.DataSet MyDs = new System.Data.DataSet();
-			MyDs.Tables.Add(dt);
-			int count = MyTable.Rows.Count;
 
 		}
         public DataTable getDataTable()
