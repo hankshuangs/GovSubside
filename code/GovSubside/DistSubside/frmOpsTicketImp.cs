@@ -30,12 +30,17 @@ namespace DistSubside
         private String[] DateRange,RouteRange;
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            this.BackColor = Color.Red;
+			if (dt.Rows.Count == 0)
+			{
+				MessageBox.Show("已完成或無資料載入", "完成", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+				return;
+			}
+			this.BackColor = Color.Red;
             MessageBox.Show("按確定後開始執行");
             String Temp = this.Text;
             this.Text = "正在匯入票證資訊...";
             SQL.Ticket_SQL Ticket_SQL_Object = new SQL.Ticket_SQL();
-            int ProcessCode = Ticket_SQL_Object.Insert(dt);
+            int ProcessCode = Ticket_SQL_Object.Insert(dt);		
             switch (ProcessCode)
             {
                 case 1:
