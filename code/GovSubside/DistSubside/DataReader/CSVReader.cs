@@ -66,61 +66,9 @@ namespace DistSubside.DataReader
 							DataRow dr = dt.NewRow();
 							for (int i = 0; i < TitleName.Length; i++)
 							{
-								try
-								{
-									if (i == 0 || i == 8 || i == 16 || i == 9 || i == 10 || i == 11 || i == 12 || i == 20 || i == 17 || i == 18 || i == 19)
-									{
-										switch (i)
-										{
-											//把日期從yyyy/MM/dd改成yyyy-MM-dd
-											case 0:
-											case 8:
-											case 16:
-												eachData[i] = eachData[i].ToString().Replace(@"/", "-");
-												dr[TitleName[i]] = eachData[i].ToString();
-												break;
-											//轉換成金錢欄位
-											case 9:
-											case 10:
-											case 11:
-											case 17:
-											case 18:
-											case 19:
-												if (eachData[i] == "")
-												{
-													dr[TitleName[i]] = 0;
-												}
-												else
-												{
-													dr[TitleName[i]] = Decimal.Parse(eachData[i].ToString());
-												}
-												break;
-											case 12:
-											case 20:
-												if (eachData[i] == "" || eachData[i] == String.Empty)
-												{
-													dr[TitleName[i]] = "-1";
-												}
-												else
-												{
-													dr[TitleName[i]] = eachData[i].ToString();
-												}
-												break;
-										}
-
-									}
-									else
-									{
-										dr[TitleName[i]] = eachData[i].ToString();
-									}
-								}
-								catch (FormatException Fex)
-								{
-									//dr[TitleName[i]] = eachData[i].ToString();
-									dr[TitleName[i]] = Fex.ToString();
-								}
+								dr[TitleName[i]] = eachData[i].ToString();
 							}
-							dt.Rows.Add(dr);
+								dt.Rows.Add(dr);
 							DataLengh++;
 						}
 						#endregion
@@ -146,13 +94,17 @@ namespace DistSubside.DataReader
 						//MyTitleName2欄位名後面要加上IsFirst
 						String[] MyTitleName2 = "營運日期,路線,路線起站,路線迄站,車牌號,票證公司,票種,卡號,上車時間,上車消費應扣,上車轉乘金額,上車票差金額,上車站站序,上車站,上車計費站,上車轉乘碼,下車時間,下車消費應扣,下車轉乘金額,下車票差金額,下車站站序,下車站,下車計費站,下車轉乘碼,方向,小計,IsFirst".Split(',');
 
+						for (int i = 0; i < count; i++)
+						{
+							Mydt.Rows.Add(Mydt.NewRow());
+						}
+
 						//抓取必要的欄位
 						foreach (string titlename in MyTitleName2)
 						{
-							IsFirstData = true;
+							//IsFirstData = true;
 							for (int i = 0; i < count; i++)
-							{
-								Mydt.Rows.Add(Mydt.NewRow());
+							{						
 								if (titlename.Equals("IsFirst"))
 								{
 									if (IsFirstData) //資料堆中的第一筆
@@ -181,9 +133,9 @@ namespace DistSubside.DataReader
 										bool isAdd = true;
 										if (DataLengh != 0)
 										{
-											for (int i = 0; i < RouteArray.Count; i++)
+											for (int j = 0; j < RouteArray.Count; j++)
 											{
-												if (RouteArray[i].ToString() == dr["路線"].ToString())  //遍歷法，找到相等就把旗標改false
+												if (RouteArray[j].ToString() == Mydt.Rows[i]["路線"].ToString())  //遍歷法，找到相等就把旗標改false
 												{
 													isAdd = false;
 												}
@@ -191,15 +143,42 @@ namespace DistSubside.DataReader
 										}
 										if (isAdd)
 										{
-											RouteArray.Add(dr["路線"].ToString());
+											RouteArray.Add(Mydt.Rows[i]["路線"].ToString());
 										}
+									}
+								}
+
+								else if (titlename.Equals("上車站站序") || titlename.Equals("下車站站序"))
+								{
+									if (dt.Rows[i][titlename].ToString() == "" || dt.Rows[i][titlename].ToString() == String.Empty)
+									{
+										Mydt.Rows[i][titlename] = "-1";
+									}
+									else
+									{
+										Mydt.Rows[i][titlename] = dt.Rows[i][titlename];
+									}							
+								}
+								else if (titlename.Equals("營運日期") || titlename.Equals("上車時間") || titlename.Equals("下車時間"))
+								{
+									Mydt.Rows[i][titlename] = dt.Rows[i][titlename].ToString().Replace(@"/", "-");
+								}
+								else if (titlename.Equals("上車消費應扣") || titlename.Equals("上車轉乘金額") || titlename.Equals("上車票差金額") || titlename.Equals("下車消費應扣") || titlename.Equals("下車轉乘金額") || titlename.Equals("下車票差金額"))
+								{
+									if (dt.Rows[i][titlename].ToString() == "")
+									{
+										Mydt.Rows[i][titlename] = 0;
+									}
+									else
+									{
+										Mydt.Rows[i][titlename] = Decimal.Parse(dt.Rows[i][titlename].ToString());
 									}
 								}
 								else
 								{
-									Mydt.Rows[i][titlename] = dt.Rows[1][titlename];
+									Mydt.Rows[i][titlename] = dt.Rows[i][titlename];
 								}
-
+				
 							}
 
 						}
@@ -410,8 +389,10 @@ namespace DistSubside.DataReader
 		}
         public DataTable getDataTable()
         {
-            return dt;
-        }
+			//return dt;
+			return Mydt;
 
-    }
+		}
+
+	}
 }
