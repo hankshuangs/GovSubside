@@ -182,5 +182,16 @@ namespace DistSubside
                 h.Show();
             }
         }
-    }
+
+		private void ddiFailedTable_Click(object sender, EventArgs e)
+		{
+			if (!IsMdiChildrenRun("frmFailedTable"))
+			{
+				frmFailedTable f = new frmFailedTable();
+				f.MdiParent = this;
+				f.Show();
+			}
+
+		}
+	}
 }

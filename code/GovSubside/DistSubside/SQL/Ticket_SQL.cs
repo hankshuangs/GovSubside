@@ -16,7 +16,7 @@ namespace DistSubside.SQL
             for (int i = 0; i < DT.Rows.Count; i++)
             {
                 DataRow dr = DT.Rows[i];
-                if (Int32.Parse(dr["IsFirst"].ToString()) == 1) //判斷是否是第一筆
+				if (Int32.Parse(dr["IsFirst"].ToString()) == 1) //判斷是否是第一筆
                 {
                     #region 如果是第一筆資料
                     #region 是否有資料在資料庫裡

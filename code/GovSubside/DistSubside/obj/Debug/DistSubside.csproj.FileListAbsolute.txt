@@ -115,18 +115,6 @@ D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\DistSubside.exe.config
 D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\DistSubside.exe
 D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\DistSubside.pdb
 D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\Microsoft.SqlServer.Types.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
-D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 D:\Git\GovSubside\code\GovSubside\DistSubside\obj\Debug\DistSubside.csprojResolveAssemblyReference.cache
 D:\Git\GovSubside\code\GovSubside\DistSubside\obj\Debug\DistSubside.csproj.ResolveComReference.cache
 D:\Git\GovSubside\code\GovSubside\DistSubside\obj\Debug\DistSubside.frmAboutBox.resources
@@ -151,3 +139,5 @@ D:\Git\GovSubside\code\GovSubside\DistSubside\obj\Debug\RdlCompile.cache
 D:\Git\GovSubside\code\GovSubside\DistSubside\obj\Debug\RdlCompile.compiled
 D:\Git\GovSubside\code\GovSubside\DistSubside\obj\Debug\DistSubside.exe
 D:\Git\GovSubside\code\GovSubside\DistSubside\obj\Debug\DistSubside.pdb
+D:\Git\GovSubside\code\GovSubside\DistSubside\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Git\GovSubside\code\GovSubside\DistSubside\obj\Debug\DistSubside.frmFailedTable.resources
