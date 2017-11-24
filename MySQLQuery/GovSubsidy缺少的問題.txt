@@ -1,0 +1,11 @@
+訊息 207, 層級 16, 狀態 1, 伺服器 IBUS-168-52, 程序 usp_RouteSchedule_GetByRoute
+ID, 行 15
+無效的資料行名稱 'RouteDiscript'。
+訊息 207, 層級 16, 狀態 1, 伺服器 IBUS-168-52, 程序 usp_RouteSchedule_GetByRoute
+ID, 行 29
+無效的資料行名稱 'RouteDiscript'。
+
+
+
+
+和移除了 Dbo.Squit 自訂方法
